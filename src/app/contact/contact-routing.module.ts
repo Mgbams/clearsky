@@ -1,11 +1,11 @@
-import { CityWeatherComponent } from './city-weather/city-weather.component';
+import { ContactComponent } from './contact/contact.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-
-];
+  {path: 'contact', component: ContactComponent}
+]
 
 @NgModule({
   declarations: [],
@@ -14,4 +14,4 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ]
 })
-export class AppRoutingModule { }
+export class ContactRoutingModule { }

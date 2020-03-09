@@ -1,5 +1,7 @@
 {
   "name": "darksky",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

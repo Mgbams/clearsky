@@ -1,0 +1,66 @@
+<div
+  class="container"
+  [style.background-image]="'url(' + responsiveBackgroundImage + ')'"
+>
+  <ion-progress-bar
+    type="indeterminate"
+    color="danger"
+    *ngIf="progressbar"
+  ></ion-progress-bar>
+
+  <div *ngIf="cityWeather && progressbar === false">
+    <ion-grid>
+      <ion-row class="descriptionImage">
+        <ion-col>
+          <p *ngIf="iconSrc"><img class="weatherIcon" src="{{ iconSrc }}" /></p>
+          <p class="weatherDescription">
+            {{ cityWeather["weather"][0].description }}
+          </p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="thermometer">
+          <p><ion-icon name="thermometer-outline"></ion-icon></p>
+          <p>
+            {{ cityWeather["main"].temp }} &#176; <sup color="secondary">C</sup>
+          </p>
+        </ion-col>
+        <ion-col>
+          <!-- <img src="../../assets/images/umbrella1.png" /> To be changed automatically TODO-->
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="weatherinfo">
+        <ion-col>
+          <p><ion-icon name="swap-vertical-outline"></ion-icon></p>
+          <p>Max/Min</p>
+          <p>
+            {{ cityWeather["main"].temp_max }}&#176;<sup color="secondary"
+              >C</sup
+            >
+            / {{ cityWeather["main"].temp_min }}&#176;<sup color="secondary"
+              >C</sup
+            >
+          </p>
+        </ion-col>
+        <ion-col>
+          <p><ion-icon name="speedometer-outline"></ion-icon></p>
+          <p>Wind</p>
+          <p>{{ cityWeather["wind"].speed }} mph</p>
+        </ion-col>
+        <ion-col>
+          <p><ion-icon name="water-outline"></ion-icon></p>
+          <p>Humidity</p>
+          <p>{{ cityWeather["main"].humidity }} %</p>
+        </ion-col>
+        <ion-col>
+          <p><ion-icon name="trail-sign-outline"></ion-icon></p>
+          <p>Pressure</p>
+          <p>{{ cityWeather["main"].pressure }}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <app-forecasts [city]="city" [cityGeo]="cityFromGeoLOc"></app-forecasts>
+</div>

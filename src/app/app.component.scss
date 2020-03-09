@@ -1,0 +1,15 @@
+  ion-content .active {
+    --ion-text-color: var(--ion-color-primary);
+    ion-icon {
+        --ion-text-color-rgb: var(--ion-color-primary); 
+    }
+}
+
+#sidemenu {
+    // Setting the width of sidemenu as it takes the full width of thepage by default
+    width: 300px;
+    --min-height: 100vh !important;
+    padding-bottom: 5000px;
+} 
+
+

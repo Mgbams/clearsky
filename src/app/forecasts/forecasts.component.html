@@ -1,0 +1,266 @@
+<div class="wrapper" *ngIf="displayForecastsData  && geoCity">
+  <div class="slides-container">
+    <div class="swipeButton">
+        <h2 class="city ion-text-center">{{ displayForecastsData[0].cityName}} , {{ displayForecastsData[0].country }} </h2>
+        <p class="city ion-text-center"> {{ displayForecastsData[0].date | date: 'EEEE, MMMM d, y' }} </p>
+    </div>
+    <ion-slides #slides pager="true" [options]="slideOpts" *ngIf=" displayForecastsData && geoCity" >
+      <ion-slide class="forecast ion-justify-content-between" >
+      <div class="slide-page-one">
+        <p class="time"> {{ displayForecastsData[0].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[0].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[0].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[0].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-two">
+        <p class="time"> {{ displayForecastsData[1].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[1].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[1].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[1].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-three">
+        <p class="time"> {{ displayForecastsData[2].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[2].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[2].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[2].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-four">
+        <p class="time"> {{ displayForecastsData[3].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[3].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[3].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[3].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-five">
+        <p class="time"> {{ displayForecastsData[4].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[4].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[4].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[4].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-six">
+        <p class="time"> {{ displayForecastsData[5].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[5].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[5].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[5].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-seven">
+        <p class="time"> {{ displayForecastsData[6].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[6].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[6].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[6].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-eight">
+        <p class="time"> {{ displayForecastsData[7].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[7].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[7].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[7].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+    </ion-slide>
+  
+    <ion-slide class="forecast ion-justify-content-between">
+      <div class="slide-page-two">
+        <p class="time"> {{ displayForecastsData[8].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[8].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[8].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[8].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-two">
+        <p class="time"> {{ displayForecastsData[9].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[9].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[9].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[9].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-three">
+        <p class="time"> {{ displayForecastsData[10].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[10].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[10].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[10].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-four">
+        <p class="time"> {{ displayForecastsData[11].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[11].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[11].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[11].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-five">
+        <p class="time"> {{ displayForecastsData[12].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[12].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[12].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[12].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-six">
+        <p class="time"> {{ displayForecastsData[13].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[13].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[13].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[13].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-seven">
+        <p class="time"> {{ displayForecastsData[14].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[14].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[14].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[14].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-eight">
+        <p class="time"> {{ displayForecastsData[15].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[15].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[15].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[15].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+    </ion-slide>
+  
+    <ion-slide class="forecast ion-justify-content-between">
+      <div class="slide-page-three">
+        <p class="time"> {{ displayForecastsData[16].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[16].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[16].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[16].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-two">
+        <p class="time"> {{ displayForecastsData[17].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[17].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[17].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[17].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-three">
+        <p class="time"> {{ displayForecastsData[18].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[18].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[18].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[18].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-four">
+        <p class="time"> {{ displayForecastsData[19].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[19].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[19].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[19].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-five">
+        <p class="time"> {{ displayForecastsData[20].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[20].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[20].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[20].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-six">
+        <p class="time"> {{ displayForecastsData[21].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[21].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[21].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[21].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-seven">
+        <p class="time"> {{ displayForecastsData[22].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[22].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[22].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[22].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-eight">
+        <p class="time"> {{ displayForecastsData[23].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[23].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[23].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[23].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+    </ion-slide>
+  
+    <ion-slide class="forecast ion-justify-content-between">
+      <div class="slide-page-one">
+        <p class="time"> {{ displayForecastsData[24].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[24].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[24].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[24].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-two">
+        <p class="time"> {{ displayForecastsData[25].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[25].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[25].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[25].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-three">
+        <p class="time"> {{ displayForecastsData[26].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[26].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[26].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[26].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-four">
+        <p class="time"> {{ displayForecastsData[27].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[27].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[27].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[27].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-five">
+        <p class="time"> {{ displayForecastsData[28].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[28].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[28].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[28].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-six">
+        <p class="time"> {{ displayForecastsData[29].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[29].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[29].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[29].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-seven">
+        <p class="time"> {{ displayForecastsData[30].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[30].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[30].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[30].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-eight">
+        <p class="time"> {{ displayForecastsData[31].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[31].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[31].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[31].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+    </ion-slide>
+    <ion-slide class="forecast ion-justify-content-between">
+      <div class="slide-page-one">
+        <p class="time"> {{ displayForecastsData[32].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[32].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[32].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[32].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-two">
+        <p class="time"> {{ displayForecastsData[33].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[33].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[33].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[33].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-three">
+        <p class="time"> {{ displayForecastsData[34].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[34].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[34].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[34].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-four">
+        <p class="time"> {{ displayForecastsData[35].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[35].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[35].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[35].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-five">
+        <p class="time"> {{ displayForecastsData[36].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[36].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[36].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[36].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-six">
+        <p class="time"> {{ displayForecastsData[37].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[37].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[37].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[37].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-seven">
+        <p class="time"> {{ displayForecastsData[38].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[38].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[38].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[38].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+      <div class="slide-page-eight">
+        <p class="time"> {{ displayForecastsData[39].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
+        <div> <img class="weatherIcon" [src]="displayForecastsData[39].icon" /> </div>
+        <div  class="description">{{ displayForecastsData[39].description }} </div>
+        <div class="tempActual">{{ displayForecastsData[39].temp }}&#176; <sup color="secondary">C</sup> </div>
+      </div>
+    </ion-slide>
+    </ion-slides>
+    <button type="submit" class="swiper-button-prev swiper-button-blue" (click)="prev()"></button>
+    <button type="submit" class="swiper-button-next swiper-button-blue" (click)="next()"></button>
+  </div>
+  </div>
+  

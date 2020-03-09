@@ -1,0 +1,38 @@
+<div *ngFor="let cities of localStorageCities" class="storedCities">
+  <ion-item  button (click)="searchedCity(cities.name)">
+    <ion-label>
+      {{ cities.name }}
+    </ion-label>
+  </ion-item>
+  <ion-button slot="end" fill="clear" (click)="deleteCity(cities.name)"><ion-icon color="danger" name="close-circle-outline"></ion-icon></ion-button>
+</div> 
+
+<!--<article>
+  <select (change)="selectChangeHandler($event)">
+      <option *ngFor="let cities of localStorageCities" value={{cities.name}}>{{ cities.name }}</option>
+  </select>
+</article> -->
+
+
+
+<form [formGroup]="searchCityForm" (ngSubmit)="onSubmit(searchCityForm.value)">
+  <ion-item>
+    <ion-label position="floating">Enter city</ion-label>
+    <ion-input formControlName="city"></ion-input>
+  </ion-item>
+  <ion-menu-toggle>
+    <ion-button class="ion-activatable ripple-parent" type="submit" (click)="searchedCity(searchCityForm.value)">
+      <ion-icon slot="start" name="search-outline"></ion-icon>
+      Search
+      <ion-ripple-effect type="bounded"></ion-ripple-effect>
+    </ion-button>
+  </ion-menu-toggle>
+</form>
+
+<!--
+  <ion-select [(ngModel)]="x.selected">
+  <div *ngFor="let y of x.ans; let i = index">
+      <ion-option  value="{{y}}">{{y}}</ion-option>
+  </div>
+  </ion-select>
+-->
