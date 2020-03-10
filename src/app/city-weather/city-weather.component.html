@@ -12,7 +12,7 @@
     <ion-grid>
       <ion-row class="descriptionImage">
         <ion-col>
-          <p *ngIf="iconSrc"><img class="weatherIcon" src="{{ iconSrc }}" /></p>
+          <p *ngIf="weatherdisplayIcon"><img class="weatherIcon" src="{{  weatherdisplayIcon }}" /></p>
           <p class="weatherDescription">
             {{ cityWeather["weather"][0].description }}
           </p>
@@ -21,9 +21,9 @@
 
       <ion-row>
         <ion-col class="thermometer">
-          <p><ion-icon name="thermometer-outline"></ion-icon></p>
-          <p>
-            {{ cityWeather["main"].temp }} &#176; <sup color="secondary">C</sup>
+          <p><img src="../../assets/images/temp.png" /></p>
+          <p class="temperatureMain">
+            {{ cityWeather["main"].temp  }} &#176; <sup color="secondary">C</sup>
           </p>
         </ion-col>
         <ion-col>

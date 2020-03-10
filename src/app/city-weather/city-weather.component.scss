@@ -21,13 +21,11 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-  
+    align-items: center; 
 }
 .weatherdescription {
     display: flex;
     flex-direction: column;
-    border: 1px green;
     justify-content: center;
     align-items: center;
    
@@ -48,7 +46,8 @@ ion-icon {
     text-align: center;
 }
 .weatherIcon {
-    width: 15rem;
+    width: 12rem;
+    margin: 43px 0px;
 }
 
 /* 
@@ -70,13 +69,15 @@ ion-icon {
 .descriptionImage .weatherDescription {
     position: relative;
     bottom: 80px;
-    background-color: green;
     font-size: 1.9rem;
 }
 .thermometer {
     position: relative;
     bottom: 280px;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+}
+.thermometer img {
+    width: 132px;
 }
 }
 
@@ -88,9 +89,9 @@ ion-icon {
   @media (min-width: 1024px) {
     .weatherinfo {
         position: relative;
-       bottom: 180px;
+       bottom: 260px;
         margin: auto;
-        font-size: 1.4rem;
+        font-size: 1.7rem;
     }
     .descriptionImage {
         position: relative;
@@ -99,13 +100,15 @@ ion-icon {
     .descriptionImage .weatherDescription {
         position: relative;
         bottom: 80px;
-        background-color: green;
-        font-size: 1.9rem;
+        font-size: 2rem;
     }
     .thermometer {
         position: relative;
-        bottom: 270px;
-        font-size: 1.6rem;
+        bottom: 300px;
+        font-size: 1.8rem;
+    }
+    .thermometer img {
+        width: 132px;
     }
 }
 
@@ -130,15 +133,20 @@ ion-icon {
         position: relative;
         bottom: 50px;
     }
+    .descriptionImage img {
+        width: 140px;
+    }
     .descriptionImage .weatherDescription {
         position: relative;
        bottom: 60px;
-        background-color: green;
         font-size: 1.3rem;
     }
     .thermometer {
         position: relative;
         bottom: 270px;
+    }
+    .thermometer img {
+        width: 110px;
     }
 
   }

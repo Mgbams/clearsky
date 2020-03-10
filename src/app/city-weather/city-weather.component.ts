@@ -68,11 +68,6 @@ export class CityWeatherComponent implements OnInit, OnChanges {
           this.weatherforecast
             .getCurrentCityWeather(latitude, longitude)
             .then((data: CityWeather) => {
-              const newDate =  new Date();
-              console.log('new date is give as below', newDate.getHours());
-              if (newDate.getHours() > 12 ) {
-                this.responsiveBackgroundImage = "../../assets/images/night1.jpg";
-              }
               this.progressbar = false;
               this.cityWeather = data;
               console.log(this.cityWeather);
@@ -125,9 +120,8 @@ export class CityWeatherComponent implements OnInit, OnChanges {
       .then((data: CityWeather) => {
         this.progressbar = false;
         this.cityWeather = data;
-        // this.icons(this.cityWeather['weather'][0].description); // setting weather icons
-        this.iconSrc = `http://openweathermap.org/img/wn/${this.cityWeather.weather[0].icon}@2x.png`;
-       // this.icons(this.cityWeather['weather'][0].description); // setting weather icons
+        this.icons(this.cityWeather['weather'][0].description); // setting weather icons
+        // this.iconSrc = `http://openweathermap.org/img/wn/${this.cityWeather.weather[0].icon}@2x.png`;
         this.weatherforecast
           .getCityNews(this.cityWeather['name'])
           .then(cityNews => {
@@ -146,35 +140,57 @@ export class CityWeatherComponent implements OnInit, OnChanges {
     switch (weatherDescription) {
       case 'scattered clouds':
         this.weatherdisplayIcon =
-          '../../assets/images/rainDrop.png';
+          '../../assets/images/scatteredClouds.png';
+          this.responsiveBackgroundImage = "../../assets/images/afternoon.jpg";
         break;
       case 'light rain':
         this.weatherdisplayIcon =
-          '../../assets/images/rainDrop.png';
+          '../../assets/images/lightRain.png';
+          this.responsiveBackgroundImage = "../../assets/images/afternoon.jpg";
         break;
       case 'few clouds':
         this.weatherdisplayIcon =
-          '../../assets/images/cloud-jpeg.jpg';
+          '../../assets/images/fewClouds.png';
+          this.responsiveBackgroundImage = "../../assets/images/afternoon.jpg";
         break;
       case 'broken clouds':
         this.weatherdisplayIcon =
-          '../../assets/images/cloudThunder-jpeg.jpg';
+          '../../assets/images/brokenClouds.png';
+          this.responsiveBackgroundImage = "../../assets/images/afternoon.jpg";
         break;
       case 'overcast clouds':
         this.weatherdisplayIcon =
-          '../../assets/images/overcast.png';
+          '../../assets/images/overcastClouds.png';
+          this.responsiveBackgroundImage = "../../assets/images/dayWeather.jpg";
         break;
       case 'moderate rain':
         this.weatherdisplayIcon =
-          '../../assets/images/imageedit_26_3643762342.png';
+          '../../assets/images/moderateRain.png';
+          this.responsiveBackgroundImage = "../../assets/images/afternoon.jpg";
         break;
       case 'clear sky':
         this.weatherdisplayIcon =
-          '../../assets/images/stars1.png';
+          '../../assets/images/clearSky.png';
+          this.responsiveBackgroundImage = "../../assets/images/afternoon.jpg";
+        break;
+      case 'light snow':
+          this.weatherdisplayIcon =
+            '../../assets/images/lightSnow.png';
+        break;
+      case 'shower rain':
+          this.weatherdisplayIcon =
+            '../../assets/images/showerRain.png';
+            this.responsiveBackgroundImage = "../../assets/images/evening.jpg";
+        break;
+      case 'drizzle rain':
+          this.weatherdisplayIcon =
+            '../../assets/images/showerRain.png';
+            this.responsiveBackgroundImage = "../../assets/images/evening.jpg";
         break;
       default:
         this.weatherdisplayIcon =
-          '../../assets/images/cloudSun-jpeg.jpg';
+          '../../assets/images/sunny.png';
+          this.responsiveBackgroundImage = "../../assets/images/dayWeather.jpg";
     }
   }
 }

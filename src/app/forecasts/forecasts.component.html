@@ -1,7 +1,7 @@
 <div class="wrapper" *ngIf="displayForecastsData  && geoCity">
   <div class="slides-container">
     <div class="swipeButton">
-        <h2 class="city ion-text-center">{{ displayForecastsData[0].cityName}} , {{ displayForecastsData[0].country }} </h2>
+        <h3 class="city ion-text-center">{{ displayForecastsData[0].cityName}} , {{ displayForecastsData[0].country }} </h3>
         <p class="city ion-text-center"> {{ displayForecastsData[0].date | date: 'EEEE, MMMM d, y' }} </p>
     </div>
     <ion-slides #slides pager="true" [options]="slideOpts" *ngIf=" displayForecastsData && geoCity" >
@@ -57,7 +57,7 @@
     </ion-slide>
   
     <ion-slide class="forecast ion-justify-content-between">
-      <div class="slide-page-two">
+      <div class="slide-page-one">
         <p class="time"> {{ displayForecastsData[8].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
         <div> <img class="weatherIcon" [src]="displayForecastsData[8].icon" /> </div>
         <div  class="description">{{ displayForecastsData[8].description }} </div>
@@ -108,7 +108,7 @@
     </ion-slide>
   
     <ion-slide class="forecast ion-justify-content-between">
-      <div class="slide-page-three">
+      <div class="slide-page-one">
         <p class="time"> {{ displayForecastsData[16].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
         <div> <img class="weatherIcon" [src]="displayForecastsData[16].icon" /> </div>
         <div  class="description">{{ displayForecastsData[16].description }} </div>
@@ -208,6 +208,7 @@
         <div class="tempActual">{{ displayForecastsData[31].temp }}&#176; <sup color="secondary">C</sup> </div>
       </div>
     </ion-slide>
+    
     <ion-slide class="forecast ion-justify-content-between">
       <div class="slide-page-one">
         <p class="time"> {{ displayForecastsData[32].date | date: 'H'}}:00{{ displayForecastsData[0].date | date: ' a' }} </p>
@@ -259,8 +260,8 @@
       </div>
     </ion-slide>
     </ion-slides>
-    <button type="submit" class="swiper-button-prev swiper-button-blue" (click)="prev()"></button>
-    <button type="submit" class="swiper-button-next swiper-button-blue" (click)="next()"></button>
+    <button type="submit" class="swiper-button-prev swiper-button-white" (click)="prev()"></button>
+    <button type="submit" class="swiper-button-next swiper-button-white" (click)="next()"></button>
   </div>
   </div>
   

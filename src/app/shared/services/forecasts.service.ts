@@ -12,7 +12,7 @@ export class ForecastsService {
 
   public getWeatherForecasts(cityName): Promise< any > {
     return this.http.get < any >
-    (`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=d16d7dcb95c567985adc924667a7e2cf`)
+    (`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=d16d7dcb95c567985adc924667a7e2cf`)
     .toPromise();
    }
 }

@@ -50,8 +50,9 @@ public selectedCity: string = '';
 
   deleteCity(cityName) {
    // console.log('i am singing hello everyday', boys);
-   // this.localStorageCities.splice(cityName, 1);
-   this.localStorageService.removeCity(cityName);
+   this.localStorageCities.splice(cityName, 1);
+   this.localStorageService.storeOnLocalStorage(this.localStorageCities.name);
+  // this.localStorageService.removeCity(cityName);
   }
 
   // event handler for the select element's change event

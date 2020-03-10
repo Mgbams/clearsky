@@ -4,11 +4,35 @@
 }
 .weatherIcon {
     --padding-bottom: 3px;
-    border: 3px solid yellow;
+    
   }
-.swipeButton {
-background-color: yellow;
+
+// Setting the background colours of the weatherforecasts images
+.slide-page-one .weatherIcon {
+    background-color: #1eb2a6;
 }
+.slide-page-two .weatherIcon {
+  background-color: #ffa34d;
+}
+.slide-page-three .weatherIcon {
+  background-color: #596157;
+}
+.slide-page-four .weatherIcon {
+  background-color: #efb1ff;
+}
+.slide-page-five .weatherIcon {
+  background-color: #216353;
+}
+.slide-page-six .weatherIcon {
+  background-color: #0f4c81;
+}
+.slide-page-seven .weatherIcon {
+  background-color: #b0a160;
+}
+.slide-page-eight .weatherIcon {
+  background-color: #7a4d1d;
+}
+
 .swiper-button-prev {
     position: absolute;
     top: 53%;
@@ -31,7 +55,7 @@ background-color: yellow;
     
   /* 
     ##Device = Low Resolution Tablets, Mobiles (Landscape)
-    ##Screen = B/w 481px to 767px
+    ##Screen of MaxWidth 99x3px
   */
   
   @media (min-width: 993px)  {
@@ -43,83 +67,12 @@ background-color: yellow;
   }
   .swiper-button-next {
       position: absolute;
-      top: 74%;
+      top: 80%;
       right: 10%;
       background-color:transparent;
   } 
     
 }
-
-// MEDIA QUERIES
-    
-  /* 
-    ##Device = Low Resolution Tablets, Mobiles (Landscape)
-    ##Screen = B/w 481px to 767px
-  */
-  
-  @media (min-width: 320px) and (max-width: 992px) {
-
-    ion-slide {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 100%;
-        font-size: 1.2rem;
-    }
-    
-    ion-slide > div {
-        width: 24%;
-    }
-
-    .swiper-button-prev {
-      position: absolute;
-      top: 73%;
-      left: 10%;
-      background-color:transparent;
-  }
-  .swiper-button-next {
-      position: absolute;
-      top: 73%;
-      right: 10%;
-      background-color:transparent;
-  } 
-    
-}
-  
-  /* 
-    ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 320px  and below
-  */
-  
-  @media  (min-width: 430px) and (max-width: 892px)  {
-    
-    ion-slide {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-        font-size: 1.2rem;
-    }
-    
-    ion-slide > div {
-        width: 24%;
-    }
-
-    .swiper-button-prev {
-      position: absolute;
-      top: 67%;
-      left: 5%;
-      background-color:transparent;
-  }
-  .swiper-button-next {
-      position: absolute;
-      top: 67%;
-      right: 5%;
-      background-color:transparent;
-  } 
-    
-}
-
 
   
   /* 
@@ -150,14 +103,14 @@ background-color: yellow;
     
     .swiper-button-prev {
       position: absolute;
-      top: 56%;
-      left: 5%;
+      top: 53%;
+      left: 25%;
       background-color:transparent;
   }
   .swiper-button-next {
       position: absolute;
-      top: 56%;
-      right: 5%;
+      top: 53%;
+      right: 25%;
       background-color:transparent;
   } 
   ion-slide {
@@ -165,7 +118,7 @@ background-color: yellow;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
   ion-slide > div {
@@ -173,15 +126,14 @@ background-color: yellow;
   }
   ion-slides {
     position: relative;
-    bottom: 160px;
+    bottom: 260px;
     font-size: 1.6rem;
   }
   .swipeButton {
-    background-color: yellow;
     position: relative;
-    bottom: 170px;
+    bottom: 270px;
     font-size: 1.6rem;
-    color: black;
+    color: yellow;
     }
 }
 
@@ -194,13 +146,13 @@ background-color: yellow;
     
     .swiper-button-prev {
       position: absolute;
-      top: 55%;
+      top: 53%;
       left: 5%;
       background-color:transparent;
   }
   .swiper-button-next {
       position: absolute;
-      top: 55%;
+      top: 53%;
       right: 5%;
       background-color:transparent;
   } 
@@ -220,10 +172,9 @@ background-color: yellow;
     bottom: 293px;
   }
   .swipeButton {
-    background-color: yellow;
     position: relative;
     bottom: 295px;
-    color: black;
+    color: yellow;
     }
 }
 
@@ -241,27 +192,57 @@ background-color: yellow;
     ion-slides {
      font-size: .5rem;
      padding-top: 7px;
-     bottom: 284px;
+     bottom: 295px;
     }
     .swipeButton {
-      background-color: yellow;
       position: relative;
-      bottom: 295px;
-      color: black;
+      bottom: 320px;
+      color: yellow;
       font-size: .75rem;
       }
       .swiper-button-prev {
         position: absolute;
-        top: 53%;
+        top: 52%;
         left: .5%;
         background-color:transparent;
     }
     .swiper-button-next {
         position: absolute;
-        top: 53%;
+        top: 52%;
         right: .5%;
         background-color:transparent;
     } 
+  }
+
+
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ## PC
+  */
+  
+  @media (min-width: 1200px) {
+      .swiper-button-prev {
+        position: absolute;
+        top: 68%;
+        left: 25%;
+        background-color:transparent;
+    }
+    .swiper-button-next {
+        position: absolute;
+        top: 68%;
+        right: 25%;
+        background-color:transparent;
+    } 
+    ion-slides {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 1.2rem;
+  }
+
+  ion-slide > div {
+    width: 10%;
+  }
   }
 
 

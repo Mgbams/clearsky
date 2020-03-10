@@ -100,10 +100,8 @@ export class ForecastsComponent implements OnInit, OnChanges {
                                     data.list[i].wind.deg,
                                     iconSrc
                                     );
-            // console.log(forecastWeather);
             this.displayForecastsData.push(forecastWeather);
           }
-          console.log(this.displayForecastsData);
           return this.displayForecastsData;
         })
           .catch((error) => {
